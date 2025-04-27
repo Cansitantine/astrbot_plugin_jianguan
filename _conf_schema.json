@@ -1,0 +1,127 @@
+{
+    "time_window": {
+        "description": "撤回信息检测时间窗口",
+        "type": "string",
+        "hint": "检测撤回信息的时间窗口，单位为秒",
+        "obvious_hint": true,
+        "default": "60"
+    },
+    "repeat_threshold": {
+        "description": "重复撤回阈值",
+        "type": "string",
+        "hint": "重复撤回的阈值，单位为次",
+        "obvious_hint": true,
+        "default": "3"
+    },
+    "warning_cool_down": {
+        "description": "警告冷却时间",
+        "type": "string",
+        "hint": "警告信息冷却时间，单位为秒",
+        "obvious_hint": true,
+        "default": "30"
+    },
+    "ban_duration": {
+        "description": "自动禁言时长",
+        "type": "string",
+        "hint": "自动禁言的时长，单位为秒",
+        "obvious_hint": true,
+        "default": "60"
+    },
+    "remind_message": {
+        "description": "提醒信息模板",
+        "type": "string",
+        "hint": "提醒信息的模板，您可以修改部分信息以达到自定义效果",
+        "obvious_hint": true,
+        "default": "有用户发送了高频无意义消息，用户 ID：[sender_id]，所属群聊：[group_id]"
+    },
+    "warning_message": {
+        "description": "警告信息模板",
+        "type": "string",
+        "hint": "警告信息的模板，您可以修改部分信息以达到自定义效果",
+        "obvious_hint": true,
+        "default": "您发送的消息被判定为高频无意义消息，请遵守群规！"
+    },
+    "enable_remind": {
+        "description": "是否开启撤回提醒",
+        "type": "string",
+        "hint": "默认为开启状态，此项的效果是开启后向管理员群组中发送撤回消息提醒",
+        "obvious_hint": true,
+        "default": "是",
+        "options": ["否", "是"]
+    },
+    "enable_warning": {
+        "description": "是否开启刷屏警告",
+        "type": "string",
+        "hint": "默认为开启状态，此项的效果是开启后向被撤回信息的用户发送一条警告",
+        "obvious_hint": true,
+        "default": "是",
+        "options": ["否", "是"]
+    },
+    "enable_anti_spam": {
+        "description": "是否开启自动禁言",
+        "type": "string",
+        "hint": "默认为关闭状态，开启后会在用户发送高频无意义消息后自动禁言",
+        "obvious_hint": true,
+        "default": "否",
+        "options": ["否", "是"]
+    },
+    "enable_kick": {
+        "description": "是否开启自动踢人",
+        "type": "string",
+        "hint": "默认为关闭状态，开启后会在用户发送高频无意义消息后自动踢出群聊",
+        "obvious_hint": true,
+        "default": "否",
+        "options": ["否", "是"]
+    },
+    "detection_group_ids": {
+        "description": "开启自动刷屏检测的群组ID列表",
+        "type": "list",
+        "hint": "自动检测刷屏的群组ID列表，开启后群组中的用户将在发送高频无意义消息后被警告",
+        "obvious_hint": true,
+        "default": [],
+        "items": {
+            "type": "int"
+        }
+    },
+    "anti_spam_group_ids": {
+        "description": "开启自动禁言群组ID列表",
+        "type": "list",
+        "hint": "自动禁言的群组ID列表，开启后群组中的用户将在刷屏后被禁言",
+        "obvious_hint": true,
+        "default": [],
+        "items": {
+            "type": "int"
+        }
+    },
+    "kick_group_ids": {
+        "description": "开启自动踢人群组ID列表",
+        "type": "list",
+        "hint": "开启自动踢人的群组ID列表，开启后群组中的用户将在刷屏后被踢出群聊",
+        "obvious_hint": true,
+        "default": [],
+        "items": {
+            "type": "int"
+        }
+    },
+    "remind_group_ids": {
+        "description": "提醒信息接收群组ID列表",
+        "type": "list",
+        "hint": "撤回提醒信息会发送至这些群聊，一般为管理员群组",
+        "obvious_hint": true,
+        "default": [],
+        "items": {
+            "type": "int"
+        }
+    },
+    "warning_group_ids": {
+        "description": "警告信息接收群组ID列表",
+        "type": "list",
+        "hint": "警告信息会发送至这些群聊，一般为普通群组",
+        "obvious_hint": true,
+        "default": [],
+        "items": {
+            "type": "int"
+        }
+    }
+    
+}
