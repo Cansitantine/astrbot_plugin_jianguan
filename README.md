@@ -1,8 +1,8 @@
-# helloworld
+astrbot_plugin_jianguan
 
-AstrBot 插件模板
+基于Astrbot的一个用于qq群组的刷屏监测插件
 
-A template plugin for AstrBot plugin feature
+拥有指令与配置两种调控方式
 
 # 支持
 
